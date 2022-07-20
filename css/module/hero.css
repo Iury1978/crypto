@@ -1,22 +1,21 @@
 .hero {
-  background-image: url("/img/background.jpg");
+  background-image: url("../../img/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding-top: 127px;
-  padding-bottom: 127px;
+  /* если картинка не загрузится- страхую черным бэкграундом */
+  background-color: black;
 }
 
 .hero__container {
+  padding-top: 127px;
+  padding-bottom: 127px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-
 .hero__title {
-  font-family: 'Inter';
-  font-style: normal;
   font-weight: 700;
   font-size: 100px;
   line-height: 121px;
@@ -25,31 +24,28 @@
 }
 
 .hero__subtitle {
+  max-width: 480px;
   font-family: 'IBM Plex Sans';
-  font-style: normal;
   font-weight: 300;
   font-size: 22px;
   line-height: 29px;
   color: #FFFFFF;
   margin-bottom: 50px;
-  max-width: 480px;
 }
 
 .hero__btn {
+  background-color: #55C2FF;
+  border-radius: 8px;
   padding: 11px 41px;
-  font-family: 'Inter';
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
-  text-align: center;
   color: #FFFFFF;
-  background: #55C2FF;
-  border-radius: 8px;
   border: none;
 }
 
 @media (max-width: 1024px) {
-  .hero {
+  .hero__container {
     padding-top: 92px;
     padding-bottom: 92px;
   }
@@ -60,7 +56,7 @@
 }
 
 @media (max-width: 768px) {
-  .hero {
+  .hero__container {
     padding-top: 81px;
     padding-bottom: 81px;
   }
@@ -72,15 +68,15 @@
   }
 
   .hero__subtitle {
-    margin-bottom: 24px;
     font-size: 16px;
     line-height: 21px;
     max-width: 354px;
+    margin-bottom: 24px;
   }
 }
 
 @media (max-width: 480px) {
-  .hero {
+  .hero__container {
     padding-top: 50px;
     padding-bottom: 50px;
   }
