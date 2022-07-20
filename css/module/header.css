@@ -38,7 +38,8 @@
   }
 
   .header__nav_open {
-    transform: translateY(100%);
+    /* что бы не было полоски убираем 1 пиксель */
+    transform: translateY(calc(100% - 1px));
   }
 }
 
