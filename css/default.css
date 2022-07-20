@@ -68,6 +68,8 @@ fieldset {
   transition-duration: 0.36s;
   transition-timing-function: ease-in-out;
   white-space: nowrap;
+  /* что бырасположить горизонтально по центру экрана  */
+  text-align: center;
 }
 
 .overlay::after {
