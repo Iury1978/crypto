@@ -19,4 +19,32 @@ overlay.addEventListener("click", (event) => {
   }
 });
 
+const form = document.querySelector(".modal__form");
+const modalTitle = document.querySelector(".modal__title");
 
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const data = {
+    name: form.name.value,
+    surname: form.surname.value,
+    tel: form.tel.value,
+  };
+  console.log(data);
+  fetch("https://api-form-order.herokuapp.com/api/order", {
+    method: "post",
+    body: JSON.stringify(data),
+  })
+    .then((response) => response.json())
+    .then((person) => {
+      console.log(person);
+      modalTitle.style.fontSize = "15px";
+      modalTitle.style.color = "#265D77";
+      modalTitle.textContent = `${person.name}, ваша заявка успешно отправлена, номер ${person.id}`;
+      form.reset();
+      setTimeout(() => {
+        overlay.classList.remove("overlay_open");
+        modal.classList.remove("modal_open");
+      }, 3000);
+    });
+});
