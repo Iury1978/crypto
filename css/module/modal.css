@@ -14,9 +14,10 @@
   /* скрываем модальное окно */
   visibility: hidden;
   opacity: 0;
-  transition: opacity 0.36s ease-in-out, visibility 0.36s ease-in-out;
   max-width: 688px;
   width: 100%;
+  transition-property: opacity, visibility;
+  transition-timing-function: ease-in-out;
 }
 
 .modal_open {
