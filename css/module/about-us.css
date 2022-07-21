@@ -17,13 +17,15 @@
 
 }
 
-.about-us__advantage {
+/* .about-us__advantage {
   flex-grow: 1;
+  width: 100%;
+} */
+.about-us__advantage {
+  max-width: 780px;
   width: 100%;
 }
 
 .about-us__exchange-rates {
   max-width: 380px;
 }
-
-

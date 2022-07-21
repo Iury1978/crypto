@@ -20,15 +20,20 @@
   transition-timing-function: ease-in-out;
 }
 
-.advantage__btn_active,
+.advantage__btn:hover {
+  border-color: #1C88EB;
+}
+
 .advantage__btn:active {
   background-color: #1C88EB;
   border-color: #1C88EB;
 }
 
-.advantage__btn:hover {
+.advantage__btn_active {
+  background-color: #1C88EB;
   border-color: #1C88EB;
 }
+
 
 .advantage__btn:disabled {
   background-color: #D7D7D7;
@@ -48,6 +53,7 @@
 
 .advantage__item-content_active {
   display: flex;
+  align-items: center;
 }
 
 .advantage__item-content::before {
