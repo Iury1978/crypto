@@ -1,16 +1,8 @@
 .modal {
-  /* для адаптива под мобильниу даем маржин, что бы кнопка закрытия не выпадала */
-  margin: 40px 0;
-  /* располагаем вертикально по середине экрана */
-  display: inline-block;
-  vertical-align: middle;
+  margin: auto;
+  padding: 40px 0;
   /* курсор в самом окне возвращаем на обычный, а воруг он останется pointer */
   cursor: default;
-  /* сбрасываем  с center на left/ само модальное окно будет по цнтру,
-  благодаря  text-align: center; в свойствах самого overlay */
-  text-align: left;
-  /* возвращаем для модального окна */
-  white-space: normal;
   /* скрываем модальное окно */
   visibility: hidden;
   opacity: 0;
@@ -91,6 +83,18 @@
   line-height: 17px;
   text-align: center;
   color: #FFFFFF;
+  border: 1px solid transparent;
+  transition-property: background-color, border;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.modal__order:hover {
+  background-color: #1C88EB;
+}
+
+.modal__order:active {
+  border: 1px solid #1C88EB;
 }
 
 .modal__close {
@@ -101,9 +105,16 @@
   border: none;
   line-height: 0;
   color: #55C2FF;
+  transition: color 0.2s ease-in-out;
 }
 
+.modal__close:hover {
+  color: #1C88EB;
+}
+
+
 @media (max-width: 480px) {
+
   .modal__container {
     padding: 20px 13px 36px;
   }

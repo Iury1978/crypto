@@ -52,13 +52,13 @@ fieldset {
 }
 
 .overlay {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
   position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  inset: 0;
   z-index: 900;
-  background-color:rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   cursor: pointer;
   overflow-y: auto;
   overflow-x: hidden;
@@ -66,16 +66,6 @@ fieldset {
   visibility: hidden;
   transition-property: opacity, visibility;
   transition-timing-function: ease-in-out;
-  white-space: nowrap;
-  /* что бырасположить горизонтально по центру экрана  */
-  text-align: center;
-}
-
-.overlay::after {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  height: 100%;
 }
 
 .overlay_open {

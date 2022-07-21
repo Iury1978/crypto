@@ -41,7 +41,16 @@
   font-size: 14px;
   line-height: 17px;
   color: #FFFFFF;
-  border: none;
+  border: 1px solid transparent;
+  transition: 0.2s ease-in-out;
+}
+
+.hero__btn:hover {
+  border: 1px solid #1C88EB;
+}
+
+.hero__btn:active {
+  background-color: #1C88EB;
 }
 
 @media (max-width: 1024px) {
