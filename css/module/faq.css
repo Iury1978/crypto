@@ -76,6 +76,12 @@
 }
 
 @media (max-width: 768px) {
+  .faq__title {
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 20px;
+  }
+
   .faq__question {
     font-size: 18px;
     line-height: 22px;
