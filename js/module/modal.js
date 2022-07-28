@@ -2,8 +2,10 @@ const heroBtn = document.querySelector(".hero__btn");
 const overlay = document.querySelector(".overlay");
 const modal = document.querySelector(".modal");
 
-overlay.style.transitionDuration = "0.36s";
-modal.style.transitionDuration = "0.36s";
+setTimeout(() => {
+  overlay.style.transitionDuration = "0.36s";
+  modal.style.transitionDuration = "0.36s";
+}, 360);
 
 heroBtn.addEventListener("click", () => {
   overlay.classList.add("overlay_open");
