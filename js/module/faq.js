@@ -1,6 +1,10 @@
 const show = (elem, answer) => {
   // проверуа насчет каких то коллизий
-  if (elem.classList.contains("faq__item_show")) return;
+  if (
+    elem.classList.contains("faq__item_show") ||
+    elem.classList.contains("collapsing")
+  )
+    return;
   // включаем видимость с дисплэй нон на блок
   answer.style.display = "block";
   // записываем высоту answer
@@ -15,7 +19,8 @@ const show = (elem, answer) => {
   answer.offsetHeight;
   //  и прописываем полученную высоту
   answer.style.height = `${height}px`;
-
+  //  исправляем коллизии
+  elem.classList.add("collapsing");
   // что бы повторно можно было открыть-закрыть- удаляем все стили через то время,
   // которое указано в анимации
 
@@ -26,12 +31,17 @@ const show = (elem, answer) => {
     answer.style.overflow = "";
     answer.style.transition = "";
     answer.offsetHeight;
+    elem.classList.remove("collapsing");
   }, 300);
 };
 
 const hide = (elem, answer) => {
   // проверуа насчет каких то коллизий
-  if (!elem.classList.contains("faq__item_show")) return;
+  if (
+    !elem.classList.contains("faq__item_show") ||
+    elem.classList.contains("collapsing")
+  )
+    return;
 
   answer.style.height = `${answer.offsetHeight}px`;
 
@@ -48,6 +58,8 @@ const hide = (elem, answer) => {
   // дописываем стиль
   answer.style.transition = "height 0.3s ease-in-out";
   elem.classList.remove("faq__item_show");
+  //  исправляем коллизии
+  elem.classList.add("collapsing");
 
   setTimeout(() => {
     answer.style.display = "";
@@ -55,6 +67,7 @@ const hide = (elem, answer) => {
     answer.style.overflow = "";
     answer.style.transition = "";
     answer.offsetHeight;
+    elem.classList.remove("collapsing");
   }, 300);
 };
 
