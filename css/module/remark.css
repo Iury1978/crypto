@@ -1,0 +1,42 @@
+.remark {
+  background-color: #08475E;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 999;
+  padding: 20px 10px;
+}
+
+.remark__text {
+
+  font-family: 'IBM Plex Sans';
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  color: #FFFFFF;
+
+}
+
+@media (max-width: 1024px) {
+  .remark {
+    padding-top: 23px;
+    padding-bottom: 22px;
+  }
+
+  .remark__text {
+    font-size: 12px;
+    line-height: 16px;
+
+  }
+}
+
+/* на этом значении появляются 2 строки. поэтому делаю адаптив раньше обычного
+(что бы не увеличивалась  высота блока) */
+
+@media (max-width: 605px) {
+  .remark {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+  }
+}
