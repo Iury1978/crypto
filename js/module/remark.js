@@ -3,7 +3,7 @@ let height = remark.offsetHeight;
 remark.style.height = `${height}px`;
 
 const closeRemark = () => {
-  height -= 4;
+  height -= 3;
   remark.style.height = `${height}px`;
   if (height > 0) {
     requestAnimationFrame(closeRemark);

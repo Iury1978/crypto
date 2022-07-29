@@ -3,11 +3,11 @@
   overflow: hidden;
   cursor: pointer;
   z-index: 999;
-  padding: 20px 10px;
+
 }
 
 .remark__text {
-
+  padding: 20px 10px;
   font-family: 'IBM Plex Sans';
   font-weight: 300;
   font-size: 16px;
@@ -18,12 +18,9 @@
 }
 
 @media (max-width: 1024px) {
-  .remark {
+  .remark__text {
     padding-top: 23px;
     padding-bottom: 22px;
-  }
-
-  .remark__text {
     font-size: 12px;
     line-height: 16px;
 
@@ -34,7 +31,7 @@
 (что бы не увеличивалась  высота блока) */
 
 @media (max-width: 605px) {
-  .remark {
+  .remark__text {
     padding-top: 15px;
     padding-bottom: 15px;
 
